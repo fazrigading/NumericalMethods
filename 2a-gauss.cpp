@@ -1,7 +1,6 @@
 #include<iostream>
-#include<iomanip>
-#include<math.h>
-// #include<stdlib.h>
+#include<iomanip> /* setprecision */
+#include<math.h> /* fabs */
 
 #define SIZE 10
 

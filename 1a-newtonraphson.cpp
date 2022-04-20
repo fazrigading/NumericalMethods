@@ -1,8 +1,6 @@
-#include <iostream>
-#include <iomanip>
-#include <cmath>
-#include <math.h>
-#include <stdlib.h>
+#include<iostream>
+#include<iomanip> /* setprecision & setw */
+#include<math.h> /* fabs */
 
 // Fungsi f(x): x^3 + 2x^2 + 10 x = 20
 #define f(x) pow(x, 3) + pow(2*x, 2) + 10*x - 20
@@ -16,8 +14,7 @@ int main(){
     float x0, x1, f0, f1, g0, e;
     int iterasi = 1, N;
     
-    // Setting precision and writing floating point values in fixed-point notation.
-    // Presisi desimal 6 digit.
+    // 6 digit dibelakang koma
     cout << setprecision(6) << fixed;
     
     cout << "=======================================" << endl;
@@ -31,12 +28,14 @@ int main(){
 
     do {
         g0 = g(x0);
-        f0 = f(x0);
         if (g0 == 0.0) {
             cout << "Error";
             exit(0);
         }
 
+        f0 = f(x0);
+
+        // Metode Newton Raphson Xn+1 = Xn - {f(Xn)/f'(Xn)}
         x1 = x0 - f0/g0;
 
         cout << "Iterasi ke-" << iterasi <<":\tx =" << setw(10);
@@ -47,10 +46,10 @@ int main(){
         iterasi++;
 
         if (iterasi > N){
-            cout << "Tidak konvergen (tidak mendekati satu titik temu).";
+            cout << "Tidak konvergen (tidak mendekati titik temu).";
             exit(0);
         }
-
+        
         f1 = f(x1);
     } while (fabs(f1)>e);
     return 0;

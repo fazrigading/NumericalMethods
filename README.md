@@ -9,16 +9,18 @@ Three of them are Gaussian Elimination, Inverse with Gauss-Jordan, and Jacobian.
 These methods are used for determining the solutions for the system of linear equations in numerical linear algebra.
 
 ## Newton-Raphson
+
+
+### Formula
 $$X_{n+1} = X_n + \dfrac{f(X_n)}{f'(X_n)}$$
 
 ## Secant
-Secant Method formula:
+a
+
+### Formula
 $$X_n = X_{n-1} - f(X_{n-1}) \dfrac{(X_{n-1} - X_{n-2})}{(f_{n-1} - f_{n-2})}$$
 
-
-
-
-We can simplify the equations:
+### Simplified Formula
 $$X_2 = X_1 - \dfrac{(X_1 - X_0) \times f_1}{(f_1 - f_0)}$$
 
 ## Gaussian Elimination
@@ -35,7 +37,6 @@ There are three types of elementary row operations:
 - Multiplying a row by a nonzero number, for example, $R_1 → kR_2$ where k is some nonzero number
 - Adding a multiple of one row to another row, for example, $R_2 → R_2 + 3R_1$
 
-
 ## Inverse with Gauss-Jordan Elimination
 Gauss-Jordan Elimination is an algorithm that can be used to solve systems of linear equations and to find the inverse of any invertible matrix. It relies upon three elementary row operations one can use on a matrix:
 
@@ -51,22 +52,22 @@ $$A = \begin{bmatrix}
 \end{bmatrix}$$
 
 $$B = \begin{pmatrix} 
-1 & 0 & 0 \\ 
-0 & 1 & 0 \\ 
-0 & 0 & 1 
+1 &0 &0 \\ 
+0 &1 &0 \\ 
+0 &0 &1 
 \end{pmatrix}$$
 
 $$C = \begin{pmatrix} 
-0 & 7 & 3 \\ 
-1 & 0 & 0 \\ 
-0 & 0 & 0 
+0 &7 &3 \\ 
+1 &0 &0 \\ 
+0 &0 &0 
 \end{pmatrix}
 $$
 
 $$D = \begin{pmatrix} 
-1 & 7 & 3 \\ 
-0 & 1 & 0 \\ 
-0 & 0 & 1 
+1 &7 &3 \\ 
+0 &1 &0 \\ 
+0 &0 &1 
 \end{pmatrix}
 $$
 
@@ -74,6 +75,14 @@ Matrices A and B are in reduced-row echelon form, but matrices C and D are not.
 C is not in reduced-row echelon form because it violates conditions two and three. 
 D is not in reduced-row echelon form because it violates condition four. 
 In addition, the elementary row operations can be used to reduce matrix D into matrix B.
+
+### Algorithm
+1. Swap the rows so that all rows with all zero entries are on the bottom
+2. Swap the rows so that the row with the largest, leftmost nonzero entry is on top.
+3. Multiply the top row by a scalar so that top row's leading entry becomes 1.
+4. Add/subtract multiples of the top row to the other rows so that all other entries in the column containing the top row's leading entry are all zero.
+5. Repeat steps 2-4 for the next leftmost nonzero entry until all the leading entries are 1.
+6. Swap the rows so that the leading entry of each nonzero row is to the right of the leading entry of the row above it.
 
 ## Jacobi 
 

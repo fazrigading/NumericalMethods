@@ -1,4 +1,4 @@
-# Numerical Methods
+<h1 align="center">Numerical Methods</h1>
 A special repository for Numerical Methods course from my uni in April 2022.
 All of the code written in C/C++, there are five methods included. 
 
@@ -17,11 +17,13 @@ $$X_{n+1} = X_n + \dfrac{f(X_n)}{f'(X_n)}$$
 ## Secant
 a
 
-### Formula
+
+<h3 align="center">Secant Formula</h3>
 $$X_n = X_{n-1} - f(X_{n-1}) \dfrac{(X_{n-1} - X_{n-2})}{(f_{n-1} - f_{n-2})}$$
 
-### Simplified Formula
+<h3 align="center">Simplified Secant Formula</h3>
 $$X_2 = X_1 - \dfrac{(X_1 - X_0) \times f_1}{(f_1 - f_0)}$$
+
 
 ## Gaussian Elimination
 In mathematics, the Gaussian elimination method is known as the row reduction algorithm for solving linear equations systems. It consists of a sequence of operations performed on the corresponding matrix of coefficients. We can also use this method to estimate either of the following:
@@ -40,9 +42,17 @@ There are three types of elementary row operations:
 ## Inverse with Gauss-Jordan Elimination
 Gauss-Jordan Elimination is an algorithm that can be used to solve systems of linear equations and to find the inverse of any invertible matrix. It relies upon three elementary row operations one can use on a matrix:
 
-- Swap the positions of two of the rows
+- Swap the positions of two of the rows.
 - Multiply one of the rows by a nonzero scalar.
 - Add or subtract the scalar multiple of one row to another row.
+
+### Reduced-row echelon form
+The purpose of Gauss-Jordan Elimination is to use the three elementary row operations to convert a matrix into reduced-row echelon form. A matrix is in reduced-row echelon form, also known as row canonical form, if the following conditions are satisfied:
+
+1. All rows with only zero entries are at the bottom of the matrix
+2. The  first nonzero entry in a row, called the leading entry or the pivot, of each nonzero row is to the right of the leading entry of the row above it.
+3. The leading entry, also known as the pivot, in any nonzero row is 1.
+4. All other entries in the column containing a leading 1 are zeroes.
 
 ### Example
 $$A = \begin{bmatrix}

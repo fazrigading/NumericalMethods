@@ -66,5 +66,3 @@ int main(){
     cout << "y = " << y1 << endl << "z = " << z1;
     return 0;
 }
-
-// https://www.codesansar.com/numerical-methods/jacobi-iteration-method-using-cpp-output.htm

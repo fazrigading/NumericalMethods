@@ -15,13 +15,25 @@ These methods are used for determining the solutions for the system of linear eq
 $$X_{n+1} = X_n + \dfrac{f(X_n)}{f'(X_n)}$$
 
 ## Secant
-a
+The secant method is a root-finding procedure in numerical analysis that uses a series of roots of secant lines to better approximate a root of a function.
+
+The tangent line to the curve of y = f(x) with the point of tangency (x<sub>0</sub>, f(x<sub>0</sub>) was used in Newton’s approach. Th
+e graph of the tangent line about x = α is essentially the same as the graph of y = f(x) when x<sub>0</sub> ≈ α. 
+The root of the tangent line was used to approximate α.
+Consider employing an approximating line based on ‘interpolation’. Let’s pretend we have two root estimations of root α, say, x<sub>0</sub> and x<sub>1</sub>. Then, we have a linear function
+
+$$q(x) = a_0 + a_1 x$$
+
+Using $$q(x_0) = f(x_0), q(x_1) = f(x_1)$$
+
+This line is also known as a secant line. Its formula is as follows:
+$$q(x) = \dfrac{f(x_0)(x_1-x) + f(x_1)(x-x_0)}{x_1 - x_0}$$
 
 
-<h3 align="center">Secant Formula</h3>
+<h3 align="center">Formula</h3>
 $$X_n = X_{n-1} - f(X_{n-1}) \dfrac{(X_{n-1} - X_{n-2})}{(f_{n-1} - f_{n-2})}$$
 
-<h3 align="center">Simplified Secant Formula</h3>
+<h3 align="center">Applied Formula</h3>
 $$X_2 = X_1 - \dfrac{(X_1 - X_0) \times f_1}{(f_1 - f_0)}$$
 
 
@@ -47,10 +59,11 @@ Gauss-Jordan Elimination is an algorithm that can be used to solve systems of li
 - Add or subtract the scalar multiple of one row to another row.
 
 ### Reduced-row echelon form
-The purpose of Gauss-Jordan Elimination is to use the three elementary row operations to convert a matrix into reduced-row echelon form. A matrix is in reduced-row echelon form, also known as row canonical form, if the following conditions are satisfied:
+The purpose of Gauss-Jordan Elimination is to use the three elementary row operations to convert a matrix into reduced-row echelon form. 
+A matrix is in **reduced-row echelon form**, also known as **row canonical form**, if the following conditions are satisfied:
 
 1. All rows with only zero entries are at the bottom of the matrix
-2. The  first nonzero entry in a row, called the leading entry or the pivot, of each nonzero row is to the right of the leading entry of the row above it.
+2. The  first nonzero entry in a row, called the **leading entry** or the **pivot**, of each nonzero row is to the right of the leading entry of the row above it.
 3. The leading entry, also known as the pivot, in any nonzero row is 1.
 4. All other entries in the column containing a leading 1 are zeroes.
 

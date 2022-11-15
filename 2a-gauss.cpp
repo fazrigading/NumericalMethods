@@ -50,5 +50,3 @@ int main(){
     }
     return(0);
 }
-
-// https://www.codesansar.com/numerical-methods/gauss-elimination-method-using-c-plus-plus-output.htm

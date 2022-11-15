@@ -67,5 +67,3 @@ int main(){
 
     return(0);
 }
-
-// https://www.codesansar.com/numerical-methods/matrix-inverse-using-gauss-jordan-cpp-output.htm

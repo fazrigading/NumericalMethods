@@ -49,6 +49,3 @@ int main(){
     cout << endl << "Akarnya adalah: " << x2;
     return 0;
 }
-
-
-// https://www.codesansar.com/numerical-methods/secant-method-python-program.htm#google_vignette

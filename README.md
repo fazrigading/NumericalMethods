@@ -44,24 +44,32 @@ Gauss-Jordan Elimination is an algorithm that can be used to solve systems of li
 - Add or subtract the scalar multiple of one row to another row.
 
 ### Example
-
-
 $$A = \begin{bmatrix}
 1 &0  &0 \\ 
 0 &1  &3 \\ 
 0 &0  &0 
-\end{bmatrix},
+\end{bmatrix}$$
 
-B = \begin{pmatrix} 
+$$B = \begin{pmatrix} 
 1 & 0 & 0 \\ 
 0 & 1 & 0 \\ 
 0 & 0 & 1 
+\end{pmatrix}$$
+
+$$C = \begin{pmatrix} 
+0 & 7 & 3 \\ 
+1 & 0 & 0 \\ 
+0 & 0 & 0 
 \end{pmatrix}
+$$
 
-$$ 
+$$D = \begin{pmatrix} 
+1 & 7 & 3 \\ 
+0 & 1 & 0 \\ 
+0 & 0 & 1 
+\end{pmatrix}
+$$
 
-
-, C = \begin{pmatrix} 0 & 7 & 3 \\ 1 & 0 & 0 \\ 0 & 0 & 0 \end{pmatrix}, D = \begin{pmatrix} 1 & 7 & 3 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{pmatrix}
 Matrices A and B are in reduced-row echelon form, but matrices C and D are not. 
 C is not in reduced-row echelon form because it violates conditions two and three. 
 D is not in reduced-row echelon form because it violates condition four. 

@@ -2,6 +2,7 @@
 A special repository for Numerical Methods course from my uni in April 2022.
 All of the code written in C/C++, there are five methods included. 
 
+
 Two of them are Newthon-Raphson method and Secant method.
 Both are used for finding the roots of given equations.
 
@@ -30,10 +31,10 @@ This line is also known as a secant line. Its formula is as follows:
 $$q(x) = \dfrac{f(x_0)(x_1-x) + f(x_1)(x-x_0)}{x_1 - x_0}$$
 
 
-<h3 align="center">Formula</h3>
+### Formula
 $$X_n = X_{n-1} - f(X_{n-1}) \dfrac{(X_{n-1} - X_{n-2})}{(f_{n-1} - f_{n-2})}$$
 
-<h3 align="center">Applied Formula</h3>
+### Applied Formula
 $$X_2 = X_1 - \dfrac{(X_1 - X_0) \times f_1}{(f_1 - f_0)}$$
 
 
@@ -74,24 +75,24 @@ $$A = \begin{bmatrix}
 0 &0  &0 
 \end{bmatrix}$$
 
-$$B = \begin{pmatrix} 
+$$B = \begin{bmatrix} 
 1 &0 &0 \\ 
 0 &1 &0 \\ 
 0 &0 &1 
-\end{pmatrix}$$
+\end{bmatrix}$$
 
-$$C = \begin{pmatrix} 
+$$C = \begin{bmatrix} 
 0 &7 &3 \\ 
 1 &0 &0 \\ 
 0 &0 &0 
-\end{pmatrix}
+\end{bmatrix}
 $$
 
-$$D = \begin{pmatrix} 
+$$D = \begin{bmatrix} 
 1 &7 &3 \\ 
 0 &1 &0 \\ 
 0 &0 &1 
-\end{pmatrix}
+\end{bmatrix}
 $$
 
 Matrices A and B are in reduced-row echelon form, but matrices C and D are not. 

@@ -10,10 +10,18 @@ Three of them are Gaussian Elimination, Inverse with Gauss-Jordan, and Jacobian.
 These methods are used for determining the solutions for the system of linear equations in numerical linear algebra.
 
 ## Newton-Raphson
+The Newton-Raphson method (also known as Newton's method) is a way to quickly find a good approximation for the root of a real-valued function $f(x) = 0$. 
+It uses the idea that a continuous and differentiable function can be approximated by a straight line tangent to it.
 
 
 ### Formula
 $$X_{n+1} = X_n + \dfrac{f(X_n)}{f'(X_n)}$$
+
+Here is a picture to demonstrate what Newton's method actually does:
+<div align="center">
+  <img src="https://ds055uzetaobb.cloudfront.net/brioche/uploads/7KrMvNiT7l-newtons-method.png?width=1200" width="400px">
+</div>
+
 
 ## Secant
 The secant method is a root-finding procedure in numerical analysis that uses a series of roots of secant lines to better approximate a root of a function.

@@ -1,20 +1,24 @@
 <h1 align="center">Numerical Methods</h1>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Language-C/C%2B%2B-blue" alt="Language">
+  <img src="https://img.shields.io/badge/Language-C%2B%2B-blue" alt="Language">
   <img src="https://img.shields.io/badge/Course-Numerical%20Methods-orange" alt="Course">
-  <img src="https://img.shields.io/badge/Semester-April%202022-lightgrey" alt="Semester">
-  <img src="https://img.shields.io/badge/Methods-5-brightgreen" alt="Methods">
+  <img src="https://img.shields.io/badge/Universitas-Mulawarman-green" alt="Semester">
+  <img src="https://img.shields.io/badge/Methods-5-yellow" alt="Methods">
 </p>
 
 A special repository for Numerical Methods course from my uni in April 2022.
-All of the code written in C/C++, there are five methods included. 
+All of the code written in C++, there are five methods included. 
 
 Two of them are Newthon-Raphson method and Secant method.
 Both are used for finding the roots of given equations.
 
 Three of them are Gaussian Elimination, Inverse with Gauss-Jordan, and Jacobian. 
 These methods are used for determining the solutions for the system of linear equations in numerical linear algebra.
+
+> [!NOTE] 
+> Feel free to use these files and executables for your assignment.
+> But remember to modify or rebuild them, make sure you are understand how each works.
 
 ## Newton-Raphson
 The Newton-Raphson method (also known as Newton's method) is a way to quickly find a good approximation for the root of a real-valued function $f(x) = 0$. 

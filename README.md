@@ -1,7 +1,14 @@
 <h1 align="center">Numerical Methods</h1>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Language-C/C%2B%2B-blue" alt="Language">
+  <img src="https://img.shields.io/badge/Course-Numerical%20Methods-orange" alt="Course">
+  <img src="https://img.shields.io/badge/Semester-April%202022-lightgrey" alt="Semester">
+  <img src="https://img.shields.io/badge/Methods-5-brightgreen" alt="Methods">
+</p>
+
 A special repository for Numerical Methods course from my uni in April 2022.
 All of the code written in C/C++, there are five methods included. 
-
 
 Two of them are Newthon-Raphson method and Secant method.
 Both are used for finding the roots of given equations.
@@ -26,7 +33,7 @@ Here is a picture to demonstrate what Newton's method actually does:
 ## Secant
 The secant method is a root-finding procedure in numerical analysis that uses a series of roots of secant lines to better approximate a root of a function.
 
-The tangent line to the curve of y = f(x) with the point of tangency (x<sub>0</sub>, f(x<sub>0</sub>) was used in Newton’s approach. Th
+The tangent line to the curve of y = f(x) with the point of tangency (x<sub>0</sub>), f(x<sub>0</sub>) was used in Newton’s approach. Th
 e graph of the tangent line about x = α is essentially the same as the graph of y = f(x) when x<sub>0</sub> ≈ α. 
 The root of the tangent line was used to approximate α.
 Consider employing an approximating line based on ‘interpolation’. Let’s pretend we have two root estimations of root α, say, x<sub>0</sub> and x<sub>1</sub>. Then, we have a linear function
@@ -72,7 +79,7 @@ The purpose of Gauss-Jordan Elimination is to use the three elementary row opera
 A matrix is in **reduced-row echelon form**, also known as **row canonical form**, if the following conditions are satisfied:
 
 1. All rows with only zero entries are at the bottom of the matrix
-2. The  first nonzero entry in a row, called the **leading entry** or the **pivot**, of each nonzero row is to the right of the leading entry of the row above it.
+2. The first nonzero entry in a row, called the **leading entry** or the **pivot**, of each nonzero row is to the right of the leading entry of the row above it.
 3. The leading entry, also known as the pivot, in any nonzero row is 1.
 4. All other entries in the column containing a leading 1 are zeroes.
 
@@ -116,5 +123,28 @@ In addition, the elementary row operations can be used to reduce matrix D into m
 5. Repeat steps 2-4 for the next leftmost nonzero entry until all the leading entries are 1.
 6. Swap the rows so that the leading entry of each nonzero row is to the right of the leading entry of the row above it.
 
-## Jacobi 
+## Jacobi
+The Jacobi method is an iterative algorithm used to solve a system of linear equations $Ax = b$, where $A$ is a square matrix. Unlike direct methods such as Gaussian elimination, Jacobi starts from an initial approximation of the solution and iteratively refines it until convergence. The key requirement for convergence is that the coefficient matrix $A$ is **diagonally dominant**.
+
+The method rewrites each equation to solve for one variable in terms of the others, then uses the values from the previous iteration to compute the next approximation.
+
+### Formula
+Given a system $Ax = b$, rewrite it as $x = D^{-1}(b - (L + U)x)$, where $D$ is the diagonal of $A$, and $L$ and $U$ are the strictly lower and upper triangular parts. The iterative formula is:
+
+$$x^{(k+1)} = D^{-1}(b - (L + U)x^{(k)})$$
+
+For each variable $x_i$:
+
+$$x_i^{(k+1)} = \dfrac{1}{a_{ii}} \left( b_i - \sum_{j \neq i} a_{ij} x_j^{(k)} \right)$$
+
+### Convergence Criterion
+The Jacobi method is guaranteed to converge if the matrix $A$ is strictly diagonally dominant or if $A$ is symmetric and positive definite.
+
+### Algorithm
+1. Rearrange the equations so that the system is diagonally dominant.
+2. Choose an initial guess $x^{(0)}$ (commonly the zero vector).
+3. For each iteration $k$:
+   - Compute $x_i^{(k+1)} = \dfrac{1}{a_{ii}} \left( b_i - \sum_{j \neq i} a_{ij} x_j^{(k)} \right)$ for all $i$.
+4. Check the stopping criterion: if $\max_i |x_i^{(k+1)} - x_i^{(k)}| < \epsilon$, stop.
+5. Otherwise, set $k = k + 1$ and repeat from step 3.
 

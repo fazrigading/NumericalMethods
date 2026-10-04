@@ -3,7 +3,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Language-C%2B%2B-blue" alt="Language">
   <img src="https://img.shields.io/badge/Course-Numerical%20Methods-orange" alt="Course">
-  <img src="https://img.shields.io/badge/Universitas-Mulawarman-green" alt="Semester">
+  <a href="https://unmul.ac.id/"><img src="https://img.shields.io/badge/Universitas-Mulawarman-green" alt="University"></a>
   <img src="https://img.shields.io/badge/Methods-5-yellow" alt="Methods">
 </p>
 
